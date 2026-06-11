@@ -3,7 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SNSとかとか</title>
+    <title>SNSとかとか - ウエさん / We-san</title>
+    <meta name="description" content="ウエさん / We-san の各種SNS・YouTube・ブログ・Discordへのリンク集。">
+    <!-- OGP / Twitter Card -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ウエさん / We-san のリンク集">
+    <meta property="og:description" content="ウエさん / We-san の各種SNS・YouTube・ブログ・Discordへのリンク集。">
+    <meta property="og:image" content="https://we-san.com/New_Channel.png">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
@@ -194,11 +202,27 @@
         };
 
         function changeLang(lang) {
+            if (!translations[lang]) lang = 'ja';
             const labels = document.querySelectorAll('.label');
             translations[lang].forEach((text, index) => {
-                labels[index].textContent = text;
+                if (labels[index]) labels[index].textContent = text;
             });
+            document.documentElement.lang = lang;
+            try {
+                localStorage.setItem('selectedLanguage', lang);
+            } catch (e) {
+                // localStorage が使えない環境では無視
+            }
         }
+
+        // ページ読み込み時に保存された言語を復元（サイト全体で共通のキーを使用）
+        document.addEventListener('DOMContentLoaded', function() {
+            let savedLang = 'ja';
+            try {
+                savedLang = localStorage.getItem('selectedLanguage') || 'ja';
+            } catch (e) {}
+            changeLang(savedLang);
+        });
     </script>
 </body>
 </html>

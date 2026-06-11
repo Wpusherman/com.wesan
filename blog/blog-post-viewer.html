@@ -2,9 +2,18 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8" />
-    <title>ブログ記事タイトル - ウエさんの駄弁り場</title>
+    <title>ブログ記事 - ウエさんの駄弁り場</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="ウエさんのブログ記事。">
+    <!-- OGP / Twitter Card -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="ブログ記事 - ウエさんの駄弁り場">
+    <meta property="og:description" content="ウエさんのブログ記事。">
+    <meta property="og:image" content="https://we-san.com/icon8.png">
+    <meta property="og:site_name" content="ウエさんの駄弁り場">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://we-san.com/icon8.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=Noto+Sans+JP:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -151,7 +160,19 @@
                         pageTitleElement.textContent = `${post.title[lang] || post.title.en} - ウエさんの駄弁り場`;
                     }
                     blogPostTitle.textContent = post.title[lang] || post.title.en;
-                    blogPostDate.textContent = new Date(post.date).toLocaleDateString(lang, { year: 'numeric', month: 'long', day: 'numeric' });
+
+                    // OGP / Twitter のタイトルを記事に合わせて更新
+                    const ogTitle = `${post.title[lang] || post.title.en} - ウエさんの駄弁り場`;
+                    const setMeta = (selector, value) => {
+                        const el = document.querySelector(selector);
+                        if (el) el.setAttribute('content', value);
+                    };
+                    setMeta('meta[property="og:title"]', ogTitle);
+                    setMeta('meta[name="twitter:title"]', ogTitle);
+                    setMeta('meta[property="og:url"]', window.location.href);
+
+                    const dateLocale = lang === 'en' ? 'en-US' : (lang === 'ru' ? 'ru-RU' : 'ja-JP');
+                    blogPostDate.textContent = new Date(post.date).toLocaleDateString(dateLocale, { year: 'numeric', month: 'long', day: 'numeric' });
                     blogPostTags.innerHTML = post.tags.map(tag => `<span class="tag-label">${tag}</span>`).join(' ');
 
                     const contentResponse = await fetch(post.content_url);
@@ -159,29 +180,13 @@
                         throw new Error(`Content HTTP error! status: ${contentResponse.status}`);
                     }
                     const content = await contentResponse.text();
+                    // コンテンツは自己管理の静的HTMLのため innerHTML を使用
                     blogPostContent.innerHTML = content;
 
-                    console.log('--- Language Switch Debug ---');
-                    console.log('Current language:', lang);
-                    
                     const contentLangElements = document.querySelectorAll('#blogPostContent [data-lang]');
-                    console.log('Found content language elements:', contentLangElements); 
-
-                    if (contentLangElements.length === 0) {
-                        console.warn('No elements with data-lang attribute found inside #blogPostContent.');
-                    }
-
                     contentLangElements.forEach(element => {
-                        console.log('Processing element:', element, 'data-lang:', element.dataset.lang); 
-                        if (element.dataset.lang === lang) {
-                            element.style.display = 'block'; 
-                            console.log('Set display to block for:', element.dataset.lang, 'Element style now:', element.style.display); 
-                        } else {
-                            element.style.display = 'none';
-                            console.log('Set display to none for:', element.dataset.lang, 'Element style now:', element.style.display); 
-                        }
+                        element.style.display = (element.dataset.lang === lang) ? 'block' : 'none';
                     });
-                    console.log('--- End Language Switch Debug ---');
 
                 } else {
                     blogPostTitle.textContent = "記事が見つかりません";

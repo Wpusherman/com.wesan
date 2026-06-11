@@ -21,7 +21,7 @@
 }
 body {
     margin: 0;
-    font-family: 'Roboto Condensed', 'Kaisei Decol', 'Kaisei Decol';
+    font-family: 'Roboto Condensed', 'Noto Sans JP', 'Kaisei Decol', sans-serif;
     overflow-x: hidden;
     background-image: url('background.svg');
     background-size: auto;
