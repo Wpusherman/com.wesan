@@ -156,8 +156,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const pageTitles = {
         'ja': 'ウエさんの駄弁り場',
-        'en': 'Wesan’s Chat Place',
-        'ru': 'Wesan’s Chat Place'
+        'en': "We-san's Chat Place",
+        'ru': "We-san's Chat Place"
     };
 
     function updateLanguage(lang) {
