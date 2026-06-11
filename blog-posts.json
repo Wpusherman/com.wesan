@@ -1,0 +1,86 @@
+[
+  {
+    "id": "beginning",
+    "url": "blog/blog-post-viewer.html?id=beginning",
+    "content_url": "content/beginning.html", 
+    "title": {
+      "ja": "ウェブサイトを作ったよ(5.18日記)",
+      "en": "I made a website (5.18 diary)",
+      "ru": "Я сделал сайт (дневник 5.18)"
+    },
+    "date": "2025-05-18",
+    "tags": [
+      "日常"
+    ]
+  },
+  {
+    "id": "day-2",
+    "url": "blog/blog-post-viewer.html?id=day-2",
+    "content_url": "content/day-2.html", 
+    "title": {
+      "ja": "お魚屋さん(5.19日記)",
+      "en": "Fishmonger (5.19 diary)",
+      "ru": "Торговец рыбой (дневник 5.19)"
+    },
+    "date": "2025-05-19",
+    "tags": [
+      "日常"
+    ]
+  },
+  {
+    "id": "bongo_cat",
+    "url": "blog/blog-post-viewer.html?id=bongo_cat",
+    "content_url": "content/bongo_cat.html",
+    "title": {
+      "ja": "画期的なクリッカーゲームBongo Cat",
+      "en": "Revolutionary Clicker - Bongo Cat",
+      "ru": "Революционный кликер - Bongo Cat"
+    },
+    "date": "2025-09-24",
+    "tags": [
+      "ゲーム"
+    ]
+  },
+  {
+    "id": "bg_mssr",
+    "url": "blog/blog-post-viewer.html?id=bg_mssr",
+    "content_url": "content/bg_mssr.html",
+    "title": {
+      "ja": "背景画像 - モルダヴィアSSR国歌",
+      "en": "Background Photos - Moldavian SSR Anthem",
+      "ru": "Background Photos - Moldavian SSR Anthem"
+    },
+    "date": "2026-01-02",
+    "tags": [
+      "動画編集"
+    ]
+  },
+  {
+    "id": "bg_artsakh",
+    "url": "blog/blog-post-viewer.html?id=bg_artsakh",
+    "content_url": "content/bg_artsakh.html",
+    "title": {
+      "ja": "背景画像 - 自由な独立アルツァフ",
+      "en": "Background Photos - Free and Independent Artsakh",
+      "ru": "Background Photos - Free and Independent Artsakh"
+    },
+    "date": "2026-01-17",
+    "tags": [
+      "動画編集"
+    ]
+  },
+  {
+    "id": "bg_rf_patri",
+    "url": "blog/blog-post-viewer.html?id=bg_rf_patri",
+    "content_url": "content/bg_rf_patri.html",
+    "title": {
+      "ja": "背景画像 - 愛国歌（ロシア）",
+      "en": "Background Photos - The Patriotic Song (Russia)",
+      "ru": "Background Photos - The Patriotic Song (Russia)"
+    },
+    "date": "2026-01-25",
+    "tags": [
+      "動画編集"
+    ]
+  }
+]

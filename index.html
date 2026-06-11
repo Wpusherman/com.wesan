@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <title>ウエさんの駄弁り場</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content ="IE=edge">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=Noto+Sans+JP:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="icon" href="favicon.ico">
+    </head>
+    <body>
+        <header class="main-header">
+        <div class="header-content-wrapper">
+              <div class="header-left-area">
+              <a href="index.html" class="logo-link">
+                <img src="icon8.png" alt="ロゴ" class="logo-image">
+                <span class="website-name lang-text" data-lang="ja">ウエさんの駄弁り場</span>
+                 <span class="website-name lang-text" data-lang="en" style="display: none;">We-san's Chat Place</span>
+                  <span class="website-name lang-text" data-lang="ru" style="display: none;">We-san's Chat Place</span>
+              </a>
+              <div class="language-switcher">
+                        <select id="languageSelector">
+                            <option value="ja">日本語</option>
+                            <option value="en">English</option>
+                            <option value="ru">Русский</option>
+                        </select>
+            </div>
+              </div>
+            <button class="menu-button-mobile" id="menuButtonMobile">
+                <i class="fas fa-bars"></i>
+            </button>
+            <button class="close-button-mobile" id="closeButtonMobileInHeader"><i class="fas fa-times"></i></button>
+        </div>
+        </header>
+    <nav class="side-nav side-nav-desktop" id="sideNavDesktop">
+        <div class="side-nav-header">
+            <button class="close-button" id="closeButtonDesktop"><i class="fas fa-times"></i></button>
+        </div>
+        <ul class="nav-list" data-lang="ja">
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="news.html">お知らせ</a></li>
+            <li><a href="blog.html">ブログ</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+        <ul class="nav-list" data-lang="en" style="display: none;">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <ul class="nav-list" data-lang="ru" style="display: none;">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+    </nav>
+    <nav class="side-nav side-nav-mobile" id="sideNavMobile">
+            <div class="side-nav-header"></div>
+            <ul class="nav-list" data-lang="ja">
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="news.html">お知らせ</a></li>
+                <li><a href="blog.html">ブログ</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+            <ul class="nav-list" data-lang="en" style="display: none;">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <ul class="nav-list" data-lang="ru" style="display: none;">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+        </nav>
+    <main class="main-content">
+    <button class="menu-button-desktop" id="menuButtonDesktop">
+        <i class="fas fa-bars"></i>
+    </button>
+    <div class="share-button-container">
+        <button class="share-button" id="shareButton">
+            <i class="fas fa-share-alt"></i> <span class="share-button-text" data-lang="ja">共有</span>
+            <span class="share-button-text" data-lang="en" style="display: none;">Share</span>
+            <span class="share-button-text" data-lang="ru" style="display: none;">Поделиться</span>
+        </button>
+        <div class="share-options" id="shareOptions">
+            <a href="#" class="share-option twitter" data-share-type="twitter">
+                <i class="fab fa-twitter"></i> Twitter
+            </a>
+            <a href="#" class="share-option facebook" data-share-type="facebook">
+                <i class="fab fa-facebook-f"></i> Facebook
+            </a>
+            <a href="#" class="share-option email" data-share-type="email">
+                <i class="fas fa-envelope"></i> Email
+            </a>
+            <button class="share-option copy-link" id="copyLinkButton">
+                <i class="fas fa-copy"></i>
+                <span class="copy-link-text" data-lang="ja">リンクをコピー</span>
+                <span class="copy-link-text" data-lang="en" style="display: none;">Copy Link</span>
+                <span class="copy-link-text" data-lang="ru" style="display: none;">Скопировать ссылку</span>
+            </button>
+        </div>
+    </div>
+        <div class="lang-content" data-lang="ja">
+    <section class="intro-section">
+            <h2>自己紹介</h2>
+        <p>名前：Western Pusherman(<strong>ウエさん</strong>って呼ばれてます)</p>
+
+            <p>Twitter: <a href="https://twitter.com/we_san69_pusher" target="_blank" rel="noopener noreferrer">@we_san69_pusher</a></p>
+            <p>Instagram: <a href="https://www.instagram.com/wpusherman/" target="_blank" rel="noopener noreferrer">wpusherman</a></p>
+            <p>Discordサーバー: <a href="https://discord.gg/DAdSg24FTe" target="_blank" rel="noopener noreferrer">Western Pusherman支援場</a></p>
+            <p>Youtube: <a href="https://www.youtube.com/@we-san" target="_blank" rel="noopener noreferrer">Western Pusherman</a></p>
+            <p> </p>
+
+            <div class="discord-widget-container">
+                <iframe src="https://ptb.discord.com/widget?id=843821677988151306&theme=dark" allowtransparency="true" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" width="350" height="500" frameborder="0" title="Discord"></iframe>
+            </div>
+        </section>
+        </div>
+        <div class="lang-content" data-lang="en" style="display: none;">
+                <section class="intro-section">
+                    <h2>Self-Introduction</h2>
+                    <p>Name: Western Pusherman (called <strong>We-san</strong>)</p>
+                    <p>Twitter: <a href="https://twitter.com/we_san69_pusher" target="_blank" rel="noopener noreferrer">@we_san69_pusher</a></p>
+                    <p>Instagram: <a href="https://www.instagram.com/wpusherman/" target="_blank" rel="noopener noreferrer">wpusherman</a></p>
+                    <p>Discord Server: <a href="https://discord.gg/DAdSg24FTe" target="_blank" rel="noopener noreferrer">Western Pusherman Support Hub</a></p>
+                    <p>Youtube: <a href="https://www.youtube.com/@we-san" target="_blank" rel="noopener noreferrer">Western Pusherman</a></p>
+                    <p> </p>
+                    <div class="discord-widget-container">
+                        <iframe src="https://ptb.discord.com/widget?id=843821677988151306&theme=dark" allowtransparency="true" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" width="350" height="500" frameborder="0" title="Discord"></iframe>
+                    </div>
+                </section>
+            </div>
+
+            <div class="lang-content" data-lang="ru" style="display: none;">
+                <section class="intro-section">
+                    <h2>О себе</h2>
+                    <p>Имя: Western Pusherman (называется <strong>We-san</strong>)</p>
+                    <p>Twitter: <a href="https://twitter.com/we_san69_pusher" target="_blank" rel="noopener noreferrer">@we_san69_pusher</a></p>
+                    <p>Instagram: <a href="https://www.instagram.com/wpusherman/" target="_blank" rel="noopener noreferrer">wpusherman</a></p>
+                    <p>Discord сервер: <a href="https://discord.gg/DAdSg24FTe" target="_blank" rel="noopener noreferrer">Центр поддержки Western Pusherman</a></p>
+                    <p>Youtube: <a href="https://www.youtube.com/@WesternPusherman" target="_blank" rel="noopener noreferrer">Western Pusherman</a></p>
+                    <p> </p>
+                    <div class="discord-widget-container">
+                        <iframe src="https://ptb.discord.com/widget?id=843821677988151306&theme=dark" allowtransparency="true" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" width="350" height="500" frameborder="0" title="Discord"></iframe>
+                    </div>
+                </section>
+            </div>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p class="lang-text" data-lang="ja">© 2026 ウエさん All rights reserved.</p>
+                <p class="lang-text" data-lang="en" style="display: none;">© 2026 We-san All rights reserved.</p>
+                <p class="lang-text" data-lang="ru" style="display: none;">© 2026 We-san Все права защищены.</p>
+        </div>    
+    </footer>
+    <script src="script.js"></script>
+    </body>
+</html>
